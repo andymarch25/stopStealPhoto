@@ -27,20 +27,27 @@
 
      	hint = $('<div class="ssph-hint" id="ssph-'+newId+'" />');
 
-          if(settings.customClass) hint.addClass(settings.customClass);
+          hint.css({
+               'position' : 'absolute',
+               'left' : hintPositionX,
+               'top' : hintPositionY,
+               'z-index' : 100
+          })
 
-     	hint.css({
-     		'position' : 'absolute',
-     		'left' : hintPositionX,
-     		'top' : hintPositionY,
-     		'z-index' : 100,
-     		'background-color' : 'rgba(0,0,0,0.75)',
-     		'color' : '#fff',
-     		'font-size' : '11px',
-     		'padding' : '4px',
-     		'font-family' : 'sans-serif',
-     		'border-radius' : '4px',
-     	})
+          if(settings.customClass) {
+               
+               hint.addClass(settings.customClass)
+
+          }else{
+               hint.css({
+                    'background-color' : 'rgba(0,0,0,0.75)',
+                    'color' : '#fff',
+                    'font-size' : '11px',
+                    'padding' : '4px',
+                    'font-family' : 'sans-serif',
+                    'border-radius' : '4px',
+               })
+          }
 
           // if data attribute exist in current element -> take text from it
           var dataText = $(currentElement).attr('data-ssph');
