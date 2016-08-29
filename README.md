@@ -1,6 +1,8 @@
 # stopStealPhoto
 jQuery plugin to prevent save images by right click
 
+[demo] (http://befine.pro/dev/stopsteal/)
+
 ### install
 just add script and fire function
 ```html
