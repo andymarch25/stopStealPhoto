@@ -1,8 +1,11 @@
 # stopStealPhoto
-jQuery plugin to prevent save images
+jQuery plugin to prevent save images by right click
 
 ### install
 just add script and fire function
+```html
+<script src="your/path/jquery.stopStealPhoto.min.js">
+```
 ```javascript
 $('img').stopStealPhoto();
 ```
